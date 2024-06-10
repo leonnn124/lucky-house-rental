@@ -1,5 +1,5 @@
 import React from 'react'
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView, useAnimation } from 'framer-motion';
 
 const IntroComment = ({
         srcSetDesktopWebP,
@@ -11,14 +11,29 @@ const IntroComment = ({
         height,
     }) => {
 
-    const ref = React.useRef(null);
-    const inView = useInView(ref);
+    const ref = React.useRef();
+    const inView = useInView(ref, { triggerOnce: true });
+    const controls = useAnimation();
+
+    const variants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 }
+    };
+
+    React.useEffect(() => {
+        if (inView) {
+            controls.start('visible');
+        }else {
+            controls.start('hidden');
+        }
+    }, [controls, inView]);
 
     return (
         <motion.div
             ref={ref}
-            initial={{ opacity: 0, transform: 'translateY(0)' }}
-            animate={{ opacity: inView ? 1 : 0, transform: inView ? 'translateY(0)' : 'translateY(50px)' }}
+            initial="hidden"
+            animate={controls}
+            variants={variants}
             transition={{ duration: 0.3 }}
             className='intro-comment'
         >
