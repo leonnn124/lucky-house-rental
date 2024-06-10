@@ -9,18 +9,18 @@
     }
     
     .container{
-        min-height: calc(100dvh + 500px);
+        min-height: calc(100vh + 500px);
 
         @include lg{
-            min-height: calc(100dvh + 400px);
+            min-height: calc(100vh + 400px);
         }
 
         @include md{
-            min-height: calc(100dvh + 350px);
+            min-height: calc(100vh + 350px);
         }
 
         @include sm{
-            min-height: calc(100dvh + 250px);
+            min-height: calc(100vh + 250px);
         }
     }
 }
@@ -61,7 +61,7 @@
 
 .intro-content{
     position: relative;
-    min-height: 100dvh;
+    min-height: 100vh;
 }
 
 .intro-comment{

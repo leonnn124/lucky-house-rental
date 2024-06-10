@@ -1,5 +1,5 @@
 import React from 'react'
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView, useAnimation } from 'framer-motion';
 import { Container, Row, Col } from 'react-bootstrap'
 import ServicesImg1 from '../../assets/images/services-1.png'
 import ServicesWebp1 from '../../assets/images/services-1.webp'
