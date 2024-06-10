@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { Container } from 'react-bootstrap'
 import LogoImg from '../../assets/images/logo.png'
@@ -9,7 +9,7 @@ import './Footer.scss'
 
 const Footer = () => {
     const controls = useAnimation();
-    const ref = useRef(null);
+    const ref = React.useRef(null);
     const inView = useInView(ref, { triggerOnce: true });
 
     const footerVariants = {
@@ -29,11 +29,9 @@ const Footer = () => {
         hidden: { opacity: 0, y: 20 },
     };
     
-    useEffect(() => {
+    React.useEffect(() => {
         if (inView) {
             controls.start('visible');
-        } else {
-            controls.start('hidden');
         }
     }, [controls, inView]);
     

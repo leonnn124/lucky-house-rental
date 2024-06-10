@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView, useAnimation } from 'framer-motion';
 import IntroImg1 from '../../assets/images/intro-1.png'
 import IntroWebp1 from '../../assets/images/intro-1.webp'
 import IntroImg2 from '../../assets/images/intro-2.png'
@@ -33,6 +33,7 @@ import IntroComment from './IntroComment'
 import './Intro.scss'
 
 const Intro = () => {
+    const controls = useAnimation();
     const ref = React.useRef(null);
     const inView = useInView(ref, { triggerOnce: true });
 
@@ -88,13 +89,25 @@ const Intro = () => {
         }
     ];
 
+    const variants = {
+      hidden: { opacity: 0 },
+      visible: { opacity: 1 }
+    };
+
+    React.useEffect(() => {
+      if (inView) {
+          controls.start('visible');
+      }
+    }, [controls, inView]);
+
     return (
         <section id='intro' className='intro-section'>
             <Container>
                 <motion.div
                     ref={ref}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: inView ? 1 : 0 }}
+                    initial="hidden"
+                    animate={controls}
+                    variants={variants}
                     transition={{ duration: 0.5 }}
                     className='intro-nav'
                 >

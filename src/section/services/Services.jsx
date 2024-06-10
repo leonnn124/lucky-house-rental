@@ -12,35 +12,49 @@ import ServicesWebp4 from '../../assets/images/services-4.webp'
 import './Services.scss'
 
 const Services = () => {
-    const ref = React.useRef(null);
-    const inView = useInView(ref, { triggerOnce: true });
-    const ref2 = React.useRef(null);
-    const inView2 = useInView(ref2, { triggerOnce: true });
-    const ref3 = React.useRef(null);
-    const inView3 = useInView(ref3, { triggerOnce: true });
-    const ref4 = React.useRef(null);
-    const inView4 = useInView(ref4, { triggerOnce: true });
-    const ref5 = React.useRef(null);
-    const inView5 = useInView(ref5, { triggerOnce: true });
+    const controls = useAnimation();
+    const refs = Array.from({ length: 5 }, () => React.useRef(null));
+    const inViews = refs.map(ref => useInView(ref, { triggerOnce: true }));
+
+    const variants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 }
+    };
+
+    const simpleVariants = {
+        hidden: { opacity: 0 },
+        visible: { opacity: 1 }
+    };
+
+    React.useEffect(() => {
+        inViews.forEach((inView, index) => {
+        if (inView) {
+            controls.start(index === 0 ? 'visible' : 'visible');
+        }
+        });
+    }, [controls, inViews]);
 
     return (
         <section id='services' className='services-section'>
             <Container>
                 <motion.div
-                    ref={ref}
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
+                    ref={refs[0]}
+                    initial="hidden"
+                    animate={controls}
+                    variants={variants}
                     transition={{ duration: 0.3 }}
                     className="services-heading">
                     <h2>你想要的，<span>吉屋</span>幫你</h2>
                 </motion.div>
+                
                 <div className="services-content">
                     <Row>
                         <Col lg={3} sm={6} className='p-3'>
                             <motion.div
-                                ref={ref2}
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: inView2 ? 1 : 0 }}
+                                ref={refs[1]}
+                                initial="hidden"
+                                animate={controls}
+                                variants={simpleVariants}
                                 transition={{ duration: 0.5 }}
                                 className='d-flex flex-column align-items-center gap-3 text-center'>
                                 <picture>
@@ -55,9 +69,10 @@ const Services = () => {
                         </Col>
                         <Col lg={3} sm={6} className='p-3'>
                             <motion.div
-                                ref={ref3}
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: inView3 ? 1 : 0 }}
+                                ref={refs[2]}
+                                initial="hidden"
+                                animate={controls}
+                                variants={simpleVariants}
                                 transition={{ duration: 0.5 }}
                                 className='d-flex flex-column align-items-center gap-3 text-center'>
                                 <picture>
@@ -72,10 +87,12 @@ const Services = () => {
                         </Col>
                         <Col lg={3} sm={6} className='p-3'>
                             <motion.div
-                                ref={ref4}
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: inView4 ? 1 : 0 }}
-                                transition={{ duration: 0.5 }}className='d-flex flex-column align-items-center gap-3 text-center'>
+                                ref={refs[3]}
+                                initial="hidden"
+                                animate={controls}
+                                variants={simpleVariants}
+                                transition={{ duration: 0.5 }}
+                                className='d-flex flex-column align-items-center gap-3 text-center'>
                                 <picture>
                                     <source srcSet={ServicesWebp3} type="image/webp" />
                                     <img src={ServicesImg3} alt="services-3" width={200} height={200} className='img-fluid px-5'/>
@@ -88,9 +105,10 @@ const Services = () => {
                         </Col>
                         <Col lg={3} sm={6} className='p-3'>
                             <motion.div
-                                ref={ref5}
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: inView5 ? 1 : 0 }}
+                                ref={refs[4]}
+                                initial="hidden"
+                                animate={controls}
+                                variants={simpleVariants}
                                 transition={{ duration: 0.5 }}
                                 className='d-flex flex-column align-items-center gap-3 text-center'>
                                 <picture>
