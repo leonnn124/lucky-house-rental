@@ -1,0 +1,39 @@
+@import '../../assets/styles/mixin';
+
+.footer-section{
+    padding: 100px 0 0 0;
+}
+
+.footer-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    .content-heading{
+        padding: 1.5rem 0;
+        letter-spacing: 10px;
+        font-size: 16px;
+        
+        @include md{
+            padding: 1rem 0;
+            letter-spacing: 3px;
+        }
+    }
+
+    p{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        letter-spacing: 3px;
+        font-size: 80%;
+
+        @include md{
+            flex-direction: column;
+            gap: 2rem;
+        }
+    }
+}

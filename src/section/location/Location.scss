@@ -1,0 +1,105 @@
+@import '../../assets/styles/mixin';
+@import '../../assets/styles/variables';
+
+@keyframes upAndDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.location-section{
+    padding: 100px 0;
+}
+
+.location-heading{
+    h2{
+        letter-spacing: 5px;
+        text-align: center;
+    }
+    span{
+        color: $primary;
+        font-weight: bold;
+        font-size: 120%;
+    }
+}
+
+.location-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    padding: 75px 0 0 0;
+    position: relative;
+    
+    @include lg{
+        flex-direction: column;
+        padding: 50px 0 0 0;
+    }
+
+    @include md{
+        flex-direction: row;
+    }
+}
+
+.location-dot{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzODQgNTEyIj48cGF0aCBmaWxsPSIjZjkzZTNlIiBkPSJNMjE1LjcgNDk5LjJDMjY3IDQzNSAzODQgMjc5LjQgMzg0IDE5MkMzODQgODYgMjk4IDAgMTkyIDBTMCA4NiAwIDE5MmMwIDg3LjQgMTE3IDI0MyAxNjguMyAzMDcuMmMxMi4zIDE1LjMgMzUuMSAxNS4zIDQ3LjQgMHpNMTkyIDEyOGE2NCA2NCAwIDEgMSAwIDEyOCA2NCA2NCAwIDEgMSAwLTEyOHoiLz48L3N2Zz4=');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: upAndDown 2s infinite;
+
+    &::after{
+        content: "";
+        position: absolute;
+        width: 200px;
+        height: 110px;
+        background: #000000e1;
+        top: 35px;
+        padding: 1rem;
+        border-radius: 15px;
+        text-align: center;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-87.5px);
+        transition: opacity .3s ease-in-out;
+    }
+
+    &:hover{
+        animation: none;
+
+        &::after{
+            opacity: 1;
+            visibility: visible;
+            transition: opacity .3s ease-in-out;
+        }
+    }
+
+    &.changping{
+        top: 59%;
+        left: 57%;
+
+        &::after{
+            content: "北屯區\A\AＸＸ路 • 八套";
+            white-space: pre;
+        }
+    }
+
+    &.wenhua{
+        top: 52%;
+        left: 39%;
+
+        &::after{
+            content: "西屯區\A\AＸＸ路 • 十二套";
+            white-space: pre;
+        }
+    }
+}
