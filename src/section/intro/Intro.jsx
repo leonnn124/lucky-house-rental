@@ -34,7 +34,7 @@ import './Intro.scss'
 
 const Intro = () => {
     const ref = React.useRef(null);
-    const inView = useInView(ref);
+    const inView = useInView(ref, { triggerOnce: true });
 
     const comments = [
         {
@@ -95,7 +95,7 @@ const Intro = () => {
                     ref={ref}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: inView ? 1 : 0 }}
-                    transition={{ duration: 1 }}
+                    transition={{ duration: 0.5 }}
                     className='intro-nav'
                 >
                     <span>您是否也遇到這些問題？</span>
