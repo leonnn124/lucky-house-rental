@@ -6,10 +6,6 @@ import mainBgWebp from '../../assets/images/main-bg.webp';
 import './Main.scss'
 
 const Main = () => {
-    const mainBgStyle = {
-        backgroundImage: `url(${mainBgImg}), url(${mainBgWebp})`,
-    };
-
     return (
         <section id='home' className='home-section'>
             <picture>
