@@ -1,20 +1,12 @@
 import React from 'react';
-import { motion, useInView } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Container } from 'react-bootstrap'
 import './Main.scss'
 
 const Main = () => {
-    const ref = React.useRef(null);
-    const inView = useInView(ref, { triggerOnce: true });
-    
     return (
         <section id='home' className='home-section'>
-            <motion.div 
-                ref={ref}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: inView ? 1 : 0 }}
-                transition={{ duration: 0.5 }}
-                className='main-bg'>
+            <div className='main-bg'>
                 <Container>
                     <div className="main-heading">
                         <motion.h1
@@ -27,7 +19,7 @@ const Main = () => {
                         </motion.h1>
                     </div>
                 </Container>
-            </motion.div>
+            </div>
         </section>
     )
 }
