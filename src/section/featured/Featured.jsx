@@ -42,98 +42,98 @@ const Featured = () => {
         <section id='featured' className='featured-section'>
             <Container>
                 <motion.div
-                ref={refs[0]}
-                initial="hidden"
-                animate={controls}
-                variants={variants}
-                transition={{ duration: 0.3 }}
-                className="featured-heading">
-                <h2>交給<span>吉屋</span>，安心出租</h2>
+                    ref={refs[0]}
+                    initial="hidden"
+                    animate={controls}
+                    variants={variants}
+                    transition={{ duration: 0.3 }}
+                    className="featured-heading">
+                        <h2>交給<span>吉屋</span>，安心出租</h2>
                 </motion.div>
                 
                 <div className="featured-content">
-                <div className="content-box">
-                    <motion.div
-                    ref={refs[1]}
-                    initial="hidden"
-                    animate={controls}
-                    variants={simpleVariants}
-                    transition={{ duration: 0.5 }}
-                    className="content-item span-2">
-                    <h5>優質服務</h5>
-                    <picture>
-                        <source srcSet={FeaturedWebp1} type="image/webp" />
-                        <img src={FeaturedImg1} alt="featured-1" width={450} height={450} className='img-fluid'/>
-                    </picture>
-                    </motion.div>
-                    <motion.div
-                    ref={refs[2]}
-                    initial="hidden"
-                    animate={controls}
-                    variants={simpleVariants}
-                    transition={{ duration: 0.5 }}
-                    className="content-item">
-                    <h5>提高效率</h5>
-                    <picture>
-                        <source srcSet={FeaturedWebp4} type="image/webp" />
-                        <img src={FeaturedImg4} alt="featured-4" width={200} height={200} className='img-fluid'/>
-                    </picture>
-                    </motion.div>
-                    <motion.div
-                    ref={refs[3]}
-                    initial="hidden"
-                    animate={controls}
-                    variants={simpleVariants}
-                    transition={{ duration: 0.5 }}
-                    className="content-item">
-                    <h5>省心省力</h5>
-                    <picture>
-                        <source srcSet={FeaturedWebp5} type="image/webp" />
-                        <img src={FeaturedImg5} alt="featured-5" width={200} height={200} className='img-fluid'/>
-                    </picture>
-                    </motion.div>
-                </div>
-                <div className="content-box">
-                    <motion.div
-                    ref={refs[4]}
-                    initial="hidden"
-                    animate={controls}
-                    variants={simpleVariants}
-                    transition={{ duration: 0.5 }}
-                    className="content-item">
-                    <h5>專業認證</h5>
-                    <picture>
-                        <source srcSet={FeaturedWebp2} type="image/webp" />
-                        <img src={FeaturedImg2} alt="featured-2" width={200} height={200} className='img-fluid'/>
-                    </picture>
-                    </motion.div>
-                    <motion.div
-                    ref={refs[5]}
-                    initial="hidden"
-                    animate={controls}
-                    variants={simpleVariants}
-                    transition={{ duration: 0.5 }}
-                    className="content-item">
-                    <h5>可靠穩定</h5>
-                    <picture>
-                        <source srcSet={FeaturedWebp3} type="image/webp" />
-                        <img src={FeaturedImg3} alt="featured-3" width={200} height={200} className='img-fluid'/>
-                    </picture>
-                    </motion.div>
-                    <motion.div
-                    ref={refs[6]}
-                    initial="hidden"
-                    animate={controls}
-                    variants={simpleVariants}
-                    transition={{ duration: 0.5 }}
-                    className="content-item span-2">
-                    <h5>專業管理</h5>
-                    <picture>
-                        <source srcSet={FeaturedWebp6} type="image/webp" />
-                        <img src={FeaturedImg6} alt="featured-6" width={450} height={450} className='img-fluid'/>
-                    </picture>
-                    </motion.div>
-                </div>
+                    <div className="content-box">
+                        <motion.div
+                        ref={refs[1]}
+                        initial="hidden"
+                        animate={controls}
+                        variants={simpleVariants}
+                        transition={{ duration: 0.5 }}
+                        className="content-item span-2">
+                        <h5>優質服務</h5>
+                        <picture>
+                            <source srcSet={FeaturedWebp1} type="image/webp" />
+                            <img src={FeaturedImg1} alt="featured-1" width={450} height={450} className='img-fluid'/>
+                        </picture>
+                        </motion.div>
+                        <motion.div
+                        ref={refs[2]}
+                        initial="hidden"
+                        animate={controls}
+                        variants={simpleVariants}
+                        transition={{ duration: 0.5 }}
+                        className="content-item">
+                        <h5>提高效率</h5>
+                        <picture>
+                            <source srcSet={FeaturedWebp4} type="image/webp" />
+                            <img src={FeaturedImg4} alt="featured-4" width={200} height={200} className='img-fluid'/>
+                        </picture>
+                        </motion.div>
+                        <motion.div
+                        ref={refs[3]}
+                        initial="hidden"
+                        animate={controls}
+                        variants={simpleVariants}
+                        transition={{ duration: 0.5 }}
+                        className="content-item">
+                        <h5>省心省力</h5>
+                        <picture>
+                            <source srcSet={FeaturedWebp5} type="image/webp" />
+                            <img src={FeaturedImg5} alt="featured-5" width={200} height={200} className='img-fluid'/>
+                        </picture>
+                        </motion.div>
+                    </div>
+                    <div className="content-box">
+                        <motion.div
+                        ref={refs[4]}
+                        initial="hidden"
+                        animate={controls}
+                        variants={simpleVariants}
+                        transition={{ duration: 0.5 }}
+                        className="content-item">
+                        <h5>專業認證</h5>
+                        <picture>
+                            <source srcSet={FeaturedWebp2} type="image/webp" />
+                            <img src={FeaturedImg2} alt="featured-2" width={200} height={200} className='img-fluid'/>
+                        </picture>
+                        </motion.div>
+                        <motion.div
+                        ref={refs[5]}
+                        initial="hidden"
+                        animate={controls}
+                        variants={simpleVariants}
+                        transition={{ duration: 0.5 }}
+                        className="content-item">
+                        <h5>可靠穩定</h5>
+                        <picture>
+                            <source srcSet={FeaturedWebp3} type="image/webp" />
+                            <img src={FeaturedImg3} alt="featured-3" width={200} height={200} className='img-fluid'/>
+                        </picture>
+                        </motion.div>
+                        <motion.div
+                        ref={refs[6]}
+                        initial="hidden"
+                        animate={controls}
+                        variants={simpleVariants}
+                        transition={{ duration: 0.5 }}
+                        className="content-item span-2">
+                        <h5>專業管理</h5>
+                        <picture>
+                            <source srcSet={FeaturedWebp6} type="image/webp" />
+                            <img src={FeaturedImg6} alt="featured-6" width={450} height={450} className='img-fluid'/>
+                        </picture>
+                        </motion.div>
+                    </div>
                 </div>
             </Container>
         </section>
