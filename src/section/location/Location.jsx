@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion, useInView } from 'framer-motion';
+import Group from '../../assets/images/Group.png'
 import { Container } from 'react-bootstrap'
 import './Location.scss'
 
@@ -27,7 +28,7 @@ const Location = () => {
                     animate={{ opacity: inView2 ? 1 : 0 }}
                     transition={{ duration: 0.5 }}
                     className='location-content'>
-                        <img src="src/assets/images/Group.png" alt="" className='img-fluid'/>
+                        <img src={Group} alt="" className='img-fluid'/>
                         <div className="location-dot changping"></div>
                         <div className="location-dot wenhua"></div>
                 </motion.div>

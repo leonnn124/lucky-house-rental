@@ -1,6 +1,8 @@
 import React from 'react'
 import { motion } from 'framer-motion';
 import { Container, Nav, Navbar, Modal } from 'react-bootstrap';
+import LogoImg from '../../assets/images/logo.png'
+import LogoWebp from '../../assets/images/logo.webp'
 import './Header.scss'
 
 const Header = () => {
@@ -75,8 +77,8 @@ const Header = () => {
                             transition={{ duration: 0.5 }}
                         >
                             <picture>
-                                <source srcSet="src/assets/images/logo.webp" type="image/webp" />
-                                <img src="src/assets/images/logo.jpg" alt="Logo" width={100} height={26.8} />
+                                <source srcSet={LogoWebp} type="image/webp" />
+                                <img src={LogoImg} alt="Logo" width={100} height={26.8} />
                             </picture>
                         </motion.div>
                     </Navbar.Brand>
