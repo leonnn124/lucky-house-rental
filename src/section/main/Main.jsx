@@ -13,6 +13,7 @@ const Main = () => {
     return (
         <section id='home' className='home-section'>
             <div className='main-bg' style={mainBgStyle}>
+                <img src={mainBgImg} alt="" />
                 <Container>
                     <div className="main-heading">
                         <motion.h1
