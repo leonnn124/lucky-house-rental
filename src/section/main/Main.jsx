@@ -1,12 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Container } from 'react-bootstrap'
+import mainBgImg from '../../assets/images/main-bg.png';
+import mainBgWebp from '../../assets/images/main-bg.webp';
 import './Main.scss'
 
 const Main = () => {
+    const mainBgStyle = {
+        backgroundImage: `url(${mainBgImg}), url(${mainBgWebp})`,
+    };
+
     return (
         <section id='home' className='home-section'>
-            <div className='main-bg'>
+            <div className='main-bg' style={mainBgStyle}>
                 <Container>
                     <div className="main-heading">
                         <motion.h1
