@@ -23,8 +23,6 @@ const IntroComment = ({
     React.useEffect(() => {
         if (inView) {
             controls.start('visible');
-        }else {
-            controls.start('hidden');
         }
     }, [controls, inView]);
 
