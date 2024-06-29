@@ -52,12 +52,46 @@
     position: relative;
     
     @include lg{
+        display: none;
         flex-direction: column;
         padding: 50px 0 0 0;
     }
 
     @include md{
         flex-direction: row;
+    }
+}
+
+.location-tab{
+    display: none;
+    max-width: 100%;
+
+    @include lg{
+        display: block;
+    }
+
+    .nav-tabs{
+        gap: 1rem;
+        width: 100%;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        padding: 2rem 0;
+    }
+
+    .nav-link{
+        color: #cccccc;
+        border-radius: 30px;
+        border: 1px solid #232323;
+        text-wrap: nowrap;
+    }
+
+    .tab-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 550px;
+        padding: 50px 0;
     }
 }
 

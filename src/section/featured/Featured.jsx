@@ -48,7 +48,8 @@ const Featured = () => {
                     variants={variants}
                     transition={{ duration: 0.3 }}
                     className="featured-heading">
-                        <h2>交給<span>吉屋</span>，安心出租</h2>
+                        <h2>房屋出租，交給<span>吉屋</span></h2>
+                        <h5 className='mt-4'><i>- 房東最安心的租屋管家 -</i></h5>
                 </motion.div>
                 
                 <div className="featured-content">
@@ -60,10 +61,10 @@ const Featured = () => {
                         variants={simpleVariants}
                         transition={{ duration: 0.5 }}
                         className="content-item span-2">
-                        <h5>優質服務</h5>
+                        <h5>編制專業團隊</h5>
                         <picture>
                             <source srcSet={FeaturedWebp1} type="image/webp" />
-                            <img src={FeaturedImg1} alt="featured-1" width={450} height={450} className='img-fluid'/>
+                            <img src={FeaturedImg1} alt="編制專業團隊" width={450} height={450} className='img-fluid'/>
                         </picture>
                         </motion.div>
                         <motion.div
@@ -73,10 +74,10 @@ const Featured = () => {
                         variants={simpleVariants}
                         transition={{ duration: 0.5 }}
                         className="content-item">
-                        <h5>提高效率</h5>
+                        <h5>租屋專家</h5>
                         <picture>
                             <source srcSet={FeaturedWebp4} type="image/webp" />
-                            <img src={FeaturedImg4} alt="featured-4" width={200} height={200} className='img-fluid'/>
+                            <img src={FeaturedImg4} alt="租屋專家" width={200} height={200} className='img-fluid'/>
                         </picture>
                         </motion.div>
                         <motion.div
@@ -86,10 +87,10 @@ const Featured = () => {
                         variants={simpleVariants}
                         transition={{ duration: 0.5 }}
                         className="content-item">
-                        <h5>省心省力</h5>
+                        <h5>安心管家</h5>
                         <picture>
                             <source srcSet={FeaturedWebp5} type="image/webp" />
-                            <img src={FeaturedImg5} alt="featured-5" width={200} height={200} className='img-fluid'/>
+                            <img src={FeaturedImg5} alt="安心管家" width={200} height={200} className='img-fluid'/>
                         </picture>
                         </motion.div>
                     </div>
@@ -104,7 +105,7 @@ const Featured = () => {
                         <h5>專業認證</h5>
                         <picture>
                             <source srcSet={FeaturedWebp2} type="image/webp" />
-                            <img src={FeaturedImg2} alt="featured-2" width={200} height={200} className='img-fluid'/>
+                            <img src={FeaturedImg2} alt="專業認證" width={200} height={200} className='img-fluid'/>
                         </picture>
                         </motion.div>
                         <motion.div
@@ -114,10 +115,10 @@ const Featured = () => {
                         variants={simpleVariants}
                         transition={{ duration: 0.5 }}
                         className="content-item">
-                        <h5>可靠穩定</h5>
+                        <h5>每月收支報表</h5>
                         <picture>
                             <source srcSet={FeaturedWebp3} type="image/webp" />
-                            <img src={FeaturedImg3} alt="featured-3" width={200} height={200} className='img-fluid'/>
+                            <img src={FeaturedImg3} alt="每月收支報表" width={200} height={200} className='img-fluid'/>
                         </picture>
                         </motion.div>
                         <motion.div

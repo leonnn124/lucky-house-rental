@@ -44,12 +44,13 @@ const Services = () => {
                     variants={variants}
                     transition={{ duration: 0.3 }}
                     className="services-heading">
-                    <h2>你想要的，<span>吉屋</span>幫你</h2>
+                    <h2>您想要的，<span>吉屋</span>幫您</h2>
+                    <h5 className='mt-4'><i>- 每月固定日收租  /  雲端電子發票 -</i></h5>
                 </motion.div>
                 
                 <div className="services-content">
-                    <Row>
-                        <Col lg={3} sm={6} className='p-3'>
+                    <Row className='justify-content-center gap-5'>
+                        <Col className='px-3 py-5'>
                             <motion.div
                                 ref={refs[1]}
                                 initial="hidden"
@@ -58,16 +59,20 @@ const Services = () => {
                                 transition={{ duration: 0.5 }}
                                 className='d-flex flex-column align-items-center gap-3 text-center'>
                                 <picture>
-                                    <source srcSet={ServicesWebp1} type="image/webp" />
-                                    <img src={ServicesImg1} alt="services-1" width={200} height={200} className='img-fluid px-5'/>
+                                    <source srcSet={ServicesWebp3} type="image/webp" />
+                                    <img src={ServicesImg3} alt="包租" width={200} height={200} className='img-fluid px-5'/>
                                 </picture>
 
-                                <h3>代租</h3>
+                                <h3>包租</h3>
 
-                                <p>描述描述描述<br />描述描述描述描述描述描述<br />描述描述描述描述<br />描述描述描述<br />描述描述</p>
+                                <p>
+                                    - 全案包租<br />
+                                    - 保證月租金<br />
+                                    - 穩定投報率
+                                </p>
                             </motion.div>
                         </Col>
-                        <Col lg={3} sm={6} className='p-3'>
+                        <Col className='px-3 py-5'>
                             <motion.div
                                 ref={refs[2]}
                                 initial="hidden"
@@ -76,16 +81,20 @@ const Services = () => {
                                 transition={{ duration: 0.5 }}
                                 className='d-flex flex-column align-items-center gap-3 text-center'>
                                 <picture>
-                                    <source srcSet={ServicesWebp2} type="image/webp" />
-                                    <img src={ServicesImg2} alt="services-2" width={200} height={200} className='img-fluid px-5'/>
+                                    <source srcSet={ServicesWebp1} type="image/webp" />
+                                    <img src={ServicesImg1} alt="代租" width={200} height={200} className='img-fluid px-5'/>
                                 </picture>
 
-                                <h3>代管</h3>
+                                <h3>代租</h3>
 
-                                <p>描述描述描述描述描述<br />描述描述描述描述描述描述<br />描述描述描述描述描述<br />描述描述</p>
+                                <p>
+                                    - 代客尋屋<br />
+                                    - 媒合房客出租<br />
+                                    - 店面營業租賃
+                                </p>
                             </motion.div>
                         </Col>
-                        <Col lg={3} sm={6} className='p-3'>
+                        <Col className='px-3 py-5'>
                             <motion.div
                                 ref={refs[3]}
                                 initial="hidden"
@@ -94,16 +103,20 @@ const Services = () => {
                                 transition={{ duration: 0.5 }}
                                 className='d-flex flex-column align-items-center gap-3 text-center'>
                                 <picture>
-                                    <source srcSet={ServicesWebp3} type="image/webp" />
-                                    <img src={ServicesImg3} alt="services-3" width={200} height={200} className='img-fluid px-5'/>
+                                    <source srcSet={ServicesWebp2} type="image/webp" />
+                                    <img src={ServicesImg2} alt="代管" width={200} height={200} className='img-fluid px-5'/>
                                 </picture>
 
-                                <h3>包租</h3>
+                                <h3>代管</h3>
 
-                                <p>描述描述<br />描述描述描述描述<br />描述描述描述<br />描述描述描述描述描述<br />描述描述描述描述</p>
+                                <p>
+                                    - 租屋管理<br />
+                                    - 代理房東服務<br />
+                                    - 專業修繕維護
+                                </p>
                             </motion.div>
                         </Col>
-                        <Col lg={3} sm={6} className='p-3'>
+                        <Col className='px-3 py-5'>
                             <motion.div
                                 ref={refs[4]}
                                 initial="hidden"
@@ -113,12 +126,15 @@ const Services = () => {
                                 className='d-flex flex-column align-items-center gap-3 text-center'>
                                 <picture>
                                     <source srcSet={ServicesWebp4} type="image/webp" />
-                                    <img src={ServicesImg4} alt="services-4" width={200} height={200} className='img-fluid px-5'/>
+                                    <img src={ServicesImg4} alt="清潔" width={200} height={200} className='img-fluid px-5'/>
                                 </picture>
 
                                 <h3>清潔</h3>
 
-                                <p>描述描述描述<br />描述描述描述描述<br />描述描述描述描述描述描述<br />描述描述描述描述<br />描述</p>
+                                <p>
+                                    - 房屋退租清潔<br />
+                                    - 定期清潔保養
+                                </p>
                             </motion.div>
                         </Col>
                     </Row>

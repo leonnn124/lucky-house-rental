@@ -19,8 +19,8 @@ const Main = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
                     >
-                        專業代租 細心代管<br/>
-                        打造無憂租居體驗
+                        專業代租 安心代管<br/>
+                        打造無憂租屋體驗
                     </motion.h1>
                 </div>
             </Container>

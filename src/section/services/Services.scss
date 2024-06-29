@@ -40,4 +40,17 @@
     @include lg{
         padding: 50px 0 0 0;
     }
+
+    .row div{
+        background: #171717;
+        border-radius: 15px;
+
+        @include lg{
+            flex: 0 0 45%;
+        }
+
+        @include md{
+            flex: 0 0 80%;
+        }
+    }
 }

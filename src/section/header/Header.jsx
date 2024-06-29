@@ -105,12 +105,12 @@ const Header = () => {
 
                         <Modal.Body className='d-lg-none'>
                             <Nav className='main-navbar' activeKey={activeLink} onSelect={handleSelect}>
-                                <Nav.Link eventKey="#home" href="#home" className={activeLink === '#home' ? 'active' : ''}>吉屋租賃</Nav.Link>
-                                <Nav.Link eventKey="#intro" href="#intro" className={activeLink === '#intro' ? 'active' : ''}>痛點解決</Nav.Link>
-                                <Nav.Link eventKey="#services" href="#services" className={activeLink === '#services' ? 'active' : ''}>專業經營</Nav.Link>
-                                <Nav.Link eventKey="#featured" href="#featured" className={activeLink === '#featured' ? 'active' : ''}>品質保證</Nav.Link>
-                                <Nav.Link eventKey="#location" href="#location" className={activeLink === '#location' ? 'active' : ''}>服務成果</Nav.Link>
-                                <Nav.Link eventKey="#contact" href="#contact" className={activeLink === '#contact' ? 'active' : ''}>聯絡諮詢</Nav.Link>
+                                <Nav.Link onClick={handleClose} eventKey="#home" href="#home" className={activeLink === '#home' ? 'active' : ''}>吉屋租賃</Nav.Link>
+                                <Nav.Link onClick={handleClose} eventKey="#intro" href="#intro" className={activeLink === '#intro' ? 'active' : ''}>痛點解決</Nav.Link>
+                                <Nav.Link onClick={handleClose} eventKey="#services" href="#services" className={activeLink === '#services' ? 'active' : ''}>專業經營</Nav.Link>
+                                <Nav.Link onClick={handleClose} eventKey="#featured" href="#featured" className={activeLink === '#featured' ? 'active' : ''}>品質保證</Nav.Link>
+                                <Nav.Link onClick={handleClose} eventKey="#location" href="#location" className={activeLink === '#location' ? 'active' : ''}>服務成果</Nav.Link>
+                                <Nav.Link onClick={handleClose} eventKey="#contact" href="#contact" className={activeLink === '#contact' ? 'active' : ''}>聯絡諮詢</Nav.Link>
                             </Nav>
                         </Modal.Body>
                     </Modal>
