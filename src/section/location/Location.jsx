@@ -65,8 +65,17 @@ const Location = () => {
                             <source srcSet={MapWebp} type="image/webp" />
                             <img src={MapImg} alt="台中市地圖" className='img-fluid'/>
                         </picture>
+                        <div className="location-dot futan"></div>
+                        <div className="location-dot chongde"></div>
+                        <div className="location-dot houzhuang"></div>
+                        <div className="location-dot dayi"></div>
                         <div className="location-dot changping"></div>
+                        <div className="location-dot beiping"></div>
                         <div className="location-dot wenhua"></div>
+                        <div className="location-dot sheraton"></div>
+                        <div className="location-dot yunjiang"></div>
+                        <div className="location-dot zhennan"></div>
+                        <div className="location-dot haohan"></div>
                 </motion.div>
 
                 <motion.div
@@ -84,27 +93,38 @@ const Location = () => {
                         >
                             <Tab eventKey="beitun" title="北屯區">
                                 <img src={Beitun} alt="北屯區" className='img-fluid'/>
+                                <div className="location-dot chongde lg"></div>
+                                <div className="location-dot houzhuang lg"></div>
+                                <div className="location-dot dayi lg"></div>
+                                <div className="location-dot changping lg"></div>
+                                <div className="location-dot beiping lg"></div>
                             </Tab>
-                            <Tab eventKey="north" title="北區">
+                            <Tab eventKey="north" title="北區" className='text-center' style={{width: '250px'}}>
                                 <img src={North} alt="北區" className='img-fluid' width={400}/>
                             </Tab>
-                            <Tab eventKey="west" title="西區">
+                            <Tab eventKey="west" title="西區" className='text-center' style={{width: '250px'}}>
                                 <img src={West} alt="西區" className='img-fluid' width={400}/>
                             </Tab>
-                            <Tab eventKey="east" title="東區">
+                            <Tab eventKey="east" title="東區" className='text-center' style={{width: '250px'}}>
                                 <img src={East} alt="東區" className='img-fluid' width={400}/>
+                                <div className="location-dot haohan lg"></div>
                             </Tab>
-                            <Tab eventKey="south" title="南區">
+                            <Tab eventKey="south" title="南區" className='text-center' style={{width: '250px'}}>
                                 <img src={South} alt="南區" className='img-fluid' width={400}/>
+                                <div className="location-dot yunjiang lg"></div>
                             </Tab>
                             <Tab eventKey="xitun" title="西屯區">
                                 <img src={Xitun} alt="西屯區" className='img-fluid'/>
+                                <div className="location-dot wenhua lg"></div>
+                                <div className="location-dot sheraton lg"></div>
                             </Tab>
                             <Tab eventKey="shalu" title="沙鹿區">
                                 <img src={Shalu} alt="沙鹿區" className='img-fluid'/>
+                                <div className="location-dot zhennan lg"></div>
                             </Tab>
                             <Tab eventKey="tanzi" title="潭子區">
                                 <img src={Tanzi} alt="潭子區" className='img-fluid'/>
+                                <div className="location-dot futan lg"></div>
                             </Tab>
                             <Tab eventKey="nantun" title="南屯區">
                                 <img src={Nantun} alt="南屯區" className='img-fluid'/>

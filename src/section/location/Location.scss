@@ -93,6 +93,10 @@
         min-height: 550px;
         padding: 50px 0 0 0;
     }
+
+    .tab-pane{
+        position: relative;
+    }
 }
 
 .location-dot{
@@ -105,10 +109,15 @@
     background-position: center;
     animation: upAndDown 2s infinite;
 
+    @include sm{
+        width: 18px;
+        height: 18px;
+    }
+
     &::after{
         content: "";
         position: absolute;
-        width: 200px;
+        min-width: 200px;
         height: 110px;
         background: #000000e1;
         top: 35px;
@@ -116,6 +125,7 @@
         border-radius: 15px;
         text-align: center;
         opacity: 0;
+        z-index: 999;
         visibility: hidden;
         transform: translateX(-87.5px);
         transition: opacity .3s ease-in-out;
@@ -131,23 +141,168 @@
         }
     }
 
-    &.changping{
-        top: 59%;
-        left: 57%;
+    &.futan{
+        top: 29%;
+        left: 54%;
 
         &::after{
-            content: "北屯區\A\AＸＸ路 • 八套";
+            content: "潭子區\A\A- 福潭路 • 6 套 -";
             white-space: pre;
+        }
+
+        &.lg{
+            top: 42%;
+            left: 43%;
+        }
+    }
+
+    &.chongde{
+        top: 34%;
+        left: 44%;
+
+        &::after{
+            content: "北屯區\A\A- 崇德十路二段 • 18 套 -";
+            white-space: pre;
+        }
+        
+        &.lg{
+            top: 22%;
+            left: 11%;
+        }
+    }
+
+    &.houzhuang{
+        top: 34%;
+        left: 42%;
+
+        &::after{
+            content: "北屯區\A\A- 后庄路 • 34 套 -";
+            white-space: pre;
+        }
+
+        &.lg{
+            top: 22%;
+            left: 7%;
+        }
+    }
+
+    &.dayi{
+        top: 33%;
+        left: 48%;
+
+        &::after{
+            content: "北屯區\A\A- 大毅讚幸福 -";
+            white-space: pre;
+        }
+
+        &.lg{
+            top: 20%;
+            left: 21%;
+        }
+    }
+
+    &.changping{
+        top: 42%;
+        left: 48%;
+
+        &::after{
+            content: "北屯區\A\A- 昌平路一段 • 4 套 -";
+            white-space: pre;
+        }
+
+        &.lg{
+            top: 55%;
+            left: 20%;
+        }
+    }
+
+    &.beiping{
+        top: 42%;
+        left: 46%;
+
+        &::after{
+            content: "北屯區\A\A- 北平路四段 • 店面 -";
+            white-space: pre;
+        }
+
+        &.lg{
+            top: 55%;
+            left: 17%;
         }
     }
 
     &.wenhua{
-        top: 52%;
-        left: 39%;
+        top: 39%;
+        left: 33%;
 
         &::after{
-            content: "西屯區\A\AＸＸ路 • 十二套";
+            content: "西屯區\A\A- 文華路 • 6 套 -";
             white-space: pre;
+        }
+
+        &.lg{
+            top: 48%;
+            left: 75%;
+        }
+    }
+
+    &.sheraton{
+        top: 42%;
+        left: 33%;
+
+        &::after{
+            content: "西屯區\A\A- 喜來登大樓 -";
+            white-space: pre;
+        }
+
+        &.lg{
+            top: 61%;
+            left: 75%;
+        }
+    }
+
+    &.yunjiang{
+        top: 42%;
+        left: 33%;
+
+        &::after{
+            content: "南區\A\A- 允將行旅 -";
+            white-space: pre;
+        }
+
+        &.lg{
+            top: 30%;
+            left: 8%;
+        }
+    }
+
+    &.zhennan{
+        top: 20%;
+        left: 8%;
+
+        &::after{
+            content: "沙鹿區\A\A- 鎮南路二段 • 18 套 -";
+            white-space: pre;
+        }
+
+        &.lg{
+            top: 43%;
+            left: 28%;
+        }
+    }
+
+    &.haohan{
+        top: 59%;
+        left: 49%;
+
+        &::after{
+            content: "東區\A\A- 浩瀚森之道 -";
+            white-space: pre;
+        }
+
+        &.lg{
+            top: 49%;
+            left: 33%;
         }
     }
 }
