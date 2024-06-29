@@ -86,16 +86,16 @@ const Location = () => {
                                 <img src={Beitun} alt="北屯區" className='img-fluid'/>
                             </Tab>
                             <Tab eventKey="north" title="北區">
-                                <img src={North} alt="西區" className='img-fluid'/>
+                                <img src={North} alt="北區" className='img-fluid' width={400}/>
                             </Tab>
                             <Tab eventKey="west" title="西區">
-                                <img src={West} alt="西區" className='img-fluid'/>
+                                <img src={West} alt="西區" className='img-fluid' width={400}/>
                             </Tab>
                             <Tab eventKey="east" title="東區">
-                                <img src={East} alt="東區" className='img-fluid'/>
+                                <img src={East} alt="東區" className='img-fluid' width={400}/>
                             </Tab>
                             <Tab eventKey="south" title="南區">
-                                <img src={South} alt="南區" className='img-fluid'/>
+                                <img src={South} alt="南區" className='img-fluid' width={400}/>
                             </Tab>
                             <Tab eventKey="xitun" title="西屯區">
                                 <img src={Xitun} alt="西屯區" className='img-fluid'/>
