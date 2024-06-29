@@ -70,6 +70,10 @@
         display: block;
     }
 
+    img{
+        user-select: none;
+    }
+
     .nav-tabs{
         gap: 1rem;
         width: 100%;
@@ -131,7 +135,7 @@
         transition: opacity .3s ease-in-out;
     }
 
-    &:hover{
+    &:hover, &:active, &:focus{
         animation: none;
 
         &::after{
