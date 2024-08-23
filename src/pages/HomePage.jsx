@@ -11,12 +11,11 @@ const HomePage = () => {
     const sections = ['home', 'intro', 'services', 'featured', 'location', 'contact'];
     const sectionRefs = React.useRef([]);
 
-    const scrollToHash = (hash) => {
-        if (hash) {
-            const element = document.querySelector(hash);
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
+    const scrollToPath = (path) => {
+        let sectionId = path === '/' ? 'home' : path.substring(1);
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
         }
     };
 
@@ -29,10 +28,12 @@ const HomePage = () => {
     
         const observerCallback = (entries) => {
             entries.forEach(entry => {
-                const navLink = document.querySelector(`.aside-navbar a[href="#${entry.target.id}"]`);
+                const sectionId = entry.target.id;
+                const navLink = document.querySelector(`.aside-navbar a[href="${sectionId === 'home' ? '/' : `/${sectionId}`}"]`);
                 
                 if (entry.isIntersecting) {
-                    window.history.replaceState(null, null, `#${entry.target.id}`);
+                    const newUrl = sectionId === 'home' ? '/' : `/${sectionId}`;
+                    window.history.replaceState(null, null, newUrl);
                     navLink.classList.add('active');
                 } else {
                     navLink.classList.remove('active');
@@ -58,10 +59,8 @@ const HomePage = () => {
     }, []);
     
     React.useEffect(() => {
-        const hash = window.location.hash;
-        if (hash) {
-            scrollToHash(hash);
-        }
+        const path = window.location.pathname;
+        scrollToPath(path);
     }, []);
 
     return (
@@ -77,4 +76,4 @@ const HomePage = () => {
     )
 }
 
-export default HomePage
+export default HomePage;
