@@ -93,7 +93,7 @@ const Header = () => {
         <>
             <Navbar fixed="top" expand="lg">
                 <Container className='py-3'>
-                    <Navbar.Brand as={Link} to="/" onClick={() => setActiveLink('/')}>
+                    <Navbar.Brand as={Link} to="/" onClick={() => {setActiveLink('/'); handleSelect('/')}}>
                         <motion.div
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
