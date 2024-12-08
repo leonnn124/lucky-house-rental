@@ -1,101 +1,110 @@
 @import '../../assets/styles/mixin';
 @import '../../assets/styles/variables';
 
-.featured-section{
+.featured-section {
     padding: 100px 0;
 
-    @include md{
+    @include md {
         padding: 50px 0;
     }
 
-    .container{
+    .container {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         min-height: calc(80vh - 200px);
 
-        @include xxl{
+        @include xxl {
             min-height: calc(100vh - 200px);
         }
     }
 }
 
-.featured-heading{
-    h2{
+.featured-heading {
+    h2 {
         letter-spacing: 5px;
         text-align: center;
+        color: #b59c87;
     }
-    h5{
-        color: #cccccc;
+
+    h5 {
+        color: #111111;
         text-align: center;
+
+        @include sm {
+            font-size: 16px;
+        }
     }
-    span{
-        color: $primary;
+
+    span {
+        color: #452522;
         font-weight: bold;
         font-size: 120%;
     }
 }
 
-.featured-content{
+.featured-content {
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 20px;
     padding: 75px 0 0 0;
-    
-    @include lg{
+
+    @include lg {
         flex-direction: column;
         padding: 50px 0 0 0;
     }
 
-    @include md{
+    @include md {
         flex-direction: row;
     }
 
-    .content-box{
+    .content-box {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
 
-        @include lg{
+        @include lg {
             grid-template-columns: repeat(3, 1fr);
         }
 
-        @include md{
+        @include md {
             grid-template-columns: repeat(1, 1fr);
         }
     }
 
-    .content-item{
+    .content-item {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         border-radius: 50px;
-        background: $deepBrown;
+        background: linear-gradient(to bottom right, #f5f5f5, #e5dbd2);
+        border: 1px solid white;
         padding: 18px 30px;
 
-        @include lg{
+        @include lg {
             padding: 15px 25px;
             border-radius: 30px;
         }
 
-        &.span-2{
+        &.span-2 {
             grid-column: span 2;
 
-            @include lg{
+            @include lg {
                 grid-column: span 1;
             }
         }
 
-        h4, h5{
-            @include lg{
+        h4,
+        h5 {
+            @include lg {
                 font-size: 16px;
                 top: 15px;
             }
 
-            @include md{
+            @include md {
                 font-size: 80%;
             }
         }

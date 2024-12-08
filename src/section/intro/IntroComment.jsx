@@ -2,9 +2,7 @@ import React from 'react'
 import { motion, useInView, useAnimation } from 'framer-motion';
 
 const IntroComment = ({
-        srcSetDesktopWebP,
         srcSetDesktopPNG,
-        srcSetMobileWebP,
         srcSetMobilePNG,
         alt,
         width,
@@ -36,9 +34,7 @@ const IntroComment = ({
             className='intro-comment'
         >
             <picture>
-                <source media="(min-width: 768px)" srcSet={srcSetDesktopWebP} type="image/webp" />
                 <source media="(min-width: 768px)" srcSet={srcSetDesktopPNG} type="image/png" />
-                <source srcSet={srcSetMobileWebP} type="image/webp" />
                 <img src={srcSetMobilePNG} alt={alt} width={width} height={height} />
             </picture>
         </motion.div>

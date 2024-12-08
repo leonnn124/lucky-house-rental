@@ -5,77 +5,82 @@
     0% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(10px);
     }
+
     100% {
         transform: translateY(0);
     }
 }
 
-.location-section{
+.location-section {
     padding: 100px 0;
 
-    @include md{
+    @include md {
         padding: 50px 0;
     }
 
-    .container{
+    .container {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        @include xxl{
+
+        @include xxl {
             min-height: calc(100vh - 200px);
         }
     }
 
-    img{
+    img {
         position: relative;
         z-index: -1;
     }
 }
 
-.location-heading{
-    h2{
+.location-heading {
+    h2 {
         letter-spacing: 5px;
         text-align: center;
+        color: #b59c87;
     }
-    span{
-        color: $primary;
+
+    span {
+        color: #452522;
         font-weight: bold;
         font-size: 120%;
     }
 }
 
-.location-content{
+.location-content {
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 20px;
     padding: 75px 0 0 0;
     position: relative;
-    
-    @include lg{
+
+    @include lg {
         display: none;
         flex-direction: column;
         padding: 50px 0 0 0;
     }
 
-    @include md{
+    @include md {
         flex-direction: row;
     }
 }
 
-.location-tab{
+.location-tab {
     display: none;
     max-width: 100%;
 
-    @include lg{
+    @include lg {
         display: block;
     }
 
-    .nav-tabs{
+    .nav-tabs {
         gap: 1rem;
         width: 100%;
         flex-wrap: nowrap;
@@ -84,14 +89,22 @@
         padding: 2rem 0;
     }
 
-    .nav-link{
-        color: #cccccc;
+    .nav-link,
+    .nav-link:hover,
+    .nav-link:active:focus {
+        color: #111111;
         border-radius: 30px;
         border: 1px solid #232323;
         text-wrap: nowrap;
+
+        &.active {
+            background: #b59c87;
+            color: #fff;
+            border: 1px solid #b59c87;
+        }
     }
 
-    .tab-content{
+    .tab-content {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -99,32 +112,33 @@
         padding: 50px 0 0 0;
     }
 
-    .tab-pane{
+    .tab-pane {
         position: relative;
     }
 }
 
-.location-dot{
+.location-dot {
     position: absolute;
     width: 25px;
     height: 25px;
-    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzODQgNTEyIj48cGF0aCBmaWxsPSIjZjkzZTNlIiBkPSJNMjE1LjcgNDk5LjJDMjY3IDQzNSAzODQgMjc5LjQgMzg0IDE5MkMzODQgODYgMjk4IDAgMTkyIDBTMCA4NiAwIDE5MmMwIDg3LjQgMTE3IDI0MyAxNjguMyAzMDcuMmMxMi4zIDE1LjMgMzUuMSAxNS4zIDQ3LjQgMHpNMTkyIDEyOGE2NCA2NCAwIDEgMSAwIDEyOCA2NCA2NCAwIDEgMSAwLTEyOHoiLz48L3N2Zz4=');
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzODQgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZmlsbD0iIzQzMjcyNCIgZD0iTTIxNS43IDQ5OS4yQzI2NyA0MzUgMzg0IDI3OS40IDM4NCAxOTJDMzg0IDg2IDI5OCAwIDE5MiAwUzAgODYgMCAxOTJjMCA4Ny40IDExNyAyNDMgMTY4LjMgMzA3LjJjMTIuMyAxNS4zIDM1LjEgMTUuMyA0Ny40IDB6TTE5MiAxMjhhNjQgNjQgMCAxIDEgMCAxMjggNjQgNjQgMCAxIDEgMC0xMjh6Ii8+PC9zdmc+);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     animation: upAndDown 2s infinite;
 
-    @include sm{
+    @include sm {
         width: 18px;
         height: 18px;
     }
 
-    &::after{
+    &::after {
         content: "";
         position: absolute;
         min-width: 200px;
         height: 110px;
-        background: #000000e1;
+        background: linear-gradient(to bottom right, #f5f5f5ee, #e5dbd2ee);
+        border: 1px solid white;
         top: 35px;
         padding: 1rem;
         border-radius: 15px;
@@ -132,180 +146,183 @@
         opacity: 0;
         z-index: 999;
         visibility: hidden;
+        color: #111111;
         transform: translateX(-87.5px);
         transition: opacity .3s ease-in-out;
     }
 
-    &:hover, &:active, &:focus{
+    &:hover,
+    &:active,
+    &:focus {
         animation: none;
 
-        &::after{
+        &::after {
             opacity: 1;
             visibility: visible;
             transition: opacity .3s ease-in-out;
         }
     }
 
-    &.futan{
+    &.futan {
         top: 29%;
         left: 54%;
 
-        &::after{
+        &::after {
             content: "潭子區\A\A- 福潭路 • 6 套 -";
             white-space: pre;
         }
 
-        &.lg{
+        &.lg {
             top: 42%;
             left: 43%;
         }
     }
 
-    &.chongde{
+    &.chongde {
         top: 34%;
         left: 44%;
 
-        &::after{
+        &::after {
             content: "北屯區\A\A- 崇德十路二段 • 18 套 -";
             white-space: pre;
         }
-        
-        &.lg{
+
+        &.lg {
             top: 22%;
             left: 11%;
         }
     }
 
-    &.houzhuang{
+    &.houzhuang {
         top: 34%;
         left: 42%;
 
-        &::after{
+        &::after {
             content: "北屯區\A\A- 后庄路 • 34 套 -";
             white-space: pre;
         }
 
-        &.lg{
+        &.lg {
             top: 22%;
             left: 7%;
         }
     }
 
-    &.dayi{
+    &.dayi {
         top: 33%;
         left: 48%;
 
-        &::after{
+        &::after {
             content: "北屯區\A\A- 大毅讚幸福 -";
             white-space: pre;
         }
 
-        &.lg{
+        &.lg {
             top: 20%;
             left: 21%;
         }
     }
 
-    &.changping{
+    &.changping {
         top: 42%;
         left: 48%;
 
-        &::after{
+        &::after {
             content: "北屯區\A\A- 昌平路一段 • 4 套 -";
             white-space: pre;
         }
 
-        &.lg{
+        &.lg {
             top: 55%;
             left: 20%;
         }
     }
 
-    &.beiping{
+    &.beiping {
         top: 42%;
         left: 46%;
 
-        &::after{
+        &::after {
             content: "北屯區\A\A- 北平路四段 • 店面 -";
             white-space: pre;
         }
 
-        &.lg{
+        &.lg {
             top: 55%;
             left: 17%;
         }
     }
 
-    &.wenhua{
+    &.wenhua {
         top: 39%;
         left: 33%;
 
-        &::after{
+        &::after {
             content: "西屯區\A\A- 文華路 • 6 套 -";
             white-space: pre;
         }
 
-        &.lg{
+        &.lg {
             top: 48%;
             left: 75%;
         }
     }
 
-    &.sheraton{
+    &.sheraton {
         top: 42%;
         left: 33%;
 
-        &::after{
+        &::after {
             content: "西屯區\A\A- 喜來登大樓 -";
             white-space: pre;
         }
 
-        &.lg{
+        &.lg {
             top: 61%;
             left: 75%;
         }
     }
 
-    &.yunjiang{
+    &.yunjiang {
         top: 64%;
         left: 35%;
 
-        &::after{
+        &::after {
             content: "南區\A\A- 允將行旅 -";
             white-space: pre;
         }
 
-        &.lg{
+        &.lg {
             top: 30%;
             left: 8%;
         }
     }
 
-    &.zhennan{
+    &.zhennan {
         top: 20%;
         left: 8%;
 
-        &::after{
+        &::after {
             content: "沙鹿區\A\A- 鎮南路二段 • 18 套 -";
             white-space: pre;
         }
 
-        &.lg{
+        &.lg {
             top: 43%;
             left: 28%;
         }
     }
 
-    &.haohan{
+    &.haohan {
         top: 59%;
         left: 49%;
 
-        &::after{
+        &::after {
             content: "東區\A\A- 浩瀚森之道 -";
             white-space: pre;
         }
 
-        &.lg{
+        &.lg {
             top: 49%;
             left: 33%;
         }

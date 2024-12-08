@@ -1,7 +1,6 @@
 import React from 'react'
 import { motion, useInView, useAnimation } from 'framer-motion';
 import MapImg from '../../assets/images/map.png'
-import MapWebp from '../../assets/images/map.webp'
 import Beitun from '../../assets/images/beitun.png'
 import Taiping from '../../assets/images/taiping.png'
 import Tanzi from '../../assets/images/tanzi.png'
@@ -62,7 +61,6 @@ const Location = () => {
                     transition={{ duration: 0.5 }}
                     className='location-content'>
                         <picture>
-                            <source srcSet={MapWebp} type="image/webp" />
                             <img src={MapImg} alt="台中市地圖" className='img-fluid'/>
                         </picture>
                         <div className="location-dot futan"></div>

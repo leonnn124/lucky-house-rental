@@ -1,56 +1,69 @@
 @import '../../assets/styles/mixin';
 @import '../../assets/styles/variables';
 
-.services-section{
+.services-section {
     padding: 100px 0;
 
-    @include md{
+    @include md {
         padding: 50px 0;
     }
 
-    .container{
+    .container {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         min-height: 800px;
 
-        @include xxl{
+        @include xxl {
             min-height: 700px;
         }
     }
 }
 
-.services-heading{
-    h2{
+.services-heading {
+    h2 {
         letter-spacing: 5px;
         text-align: center;
+        color: #b59c87;
     }
-    span{
-        color: $primary;
+
+    h5 {
+        @include sm {
+            font-size: 16px;
+        }
+    }
+
+    span {
+        color: #452522;
         font-weight: bold;
         font-size: 120%;
     }
 }
 
-.services-content{
+.services-content {
     padding: 75px 0 0 0;
     width: 100%;
-    
-    @include lg{
+
+    @include lg {
         padding: 50px 0 0 0;
     }
 
-    .row div{
-        background: #171717;
+    .row>div {
         border-radius: 15px;
+        background: linear-gradient(to bottom right, #f5f5f5, #e5dbd2);
+        border: 1px solid white;
 
-        @include lg{
+        @include lg {
             flex: 0 0 45%;
         }
 
-        @include md{
+        @include md {
             flex: 0 0 80%;
+        }
+
+        h3 {
+            color: #452522;
         }
     }
 }

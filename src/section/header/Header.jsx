@@ -2,13 +2,13 @@ import React from 'react'
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Container, Nav, Navbar, Modal } from 'react-bootstrap';
-import LogoImg from '../../assets/images/logo.png'
-import LogoWebp from '../../assets/images/logo.webp'
+import LogoImg from '../../assets/images/logo.svg'
 import './Header.scss'
 
 const Header = () => {
     const [show, setShow] = React.useState(false);
     const [activeLink, setActiveLink] = React.useState('/');
+    const [isScrolled, setIsScrolled] = React.useState(false);
     const modalRef = React.useRef(null);
     const navRef = React.useRef(null);
     const location = useLocation();
@@ -82,26 +82,35 @@ const Header = () => {
         handleActive();
         window.addEventListener('resize', handleResize);
         window.addEventListener('popstate', handlePathChange); // hashchange 改為 popstate
+        const handleScroll = () => {
+            // 檢查滾動位置是否超過 100dvh
+            if (window.scrollY > window.innerHeight) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+        window.addEventListener('scroll', handleScroll);
 
         return () => {
             window.removeEventListener('resize', handleResize);
             window.removeEventListener('popstate', handlePathChange);
+            window.removeEventListener('scroll', handleScroll);
         };
     }, []);
 
     return (
         <>
-            <Navbar fixed="top" expand="lg">
-                <Container className='py-3'>
-                    <Navbar.Brand as={Link} to="/" onClick={() => {setActiveLink('/'); handleSelect('/')}}>
+            <Navbar fixed="top" expand="lg" className={`py-0 ${isScrolled ? 'active' : ''}`}>
+                <Container>
+                    <Navbar.Brand className='p-0' as={Link} to="/main" onClick={() => {setActiveLink('/'); handleSelect('/')}}>
                         <motion.div
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.5 }}
                         >
                             <picture>
-                                <source srcSet={LogoWebp} type="image/webp" />
-                                <img src={LogoImg} alt="Logo" width={100} height={26.8} />
+                                <img src={LogoImg} alt="Logo" width={130} height={85} />
                             </picture>
                         </motion.div>
                     </Navbar.Brand>
@@ -114,7 +123,7 @@ const Header = () => {
                     >
                         <Navbar.Toggle>
                             <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <path fill="#ff0000" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM64 256c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H96c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+                                <path fill="#452522" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM64 256c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H96c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
                             </svg>
                         </Navbar.Toggle>
                     </motion.div>
@@ -122,7 +131,7 @@ const Header = () => {
                     <Modal show={show} onHide={handleClose} ref={modalRef}>
                         <Modal.Header onClick={handleClose} className='d-lg-none'>
                             <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                <path fill='#fe0000' d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z" />
+                                <path fill='#b59c87' d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z" />
                             </svg>
                         </Modal.Header>
 

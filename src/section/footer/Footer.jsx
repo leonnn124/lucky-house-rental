@@ -1,10 +1,8 @@
 import React from 'react';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { Container } from 'react-bootstrap'
-import LogoImg from '../../assets/images/logo.png'
-import LogoWebp from '../../assets/images/logo.webp'
+import LogoImg from '../../assets/images/logo.svg'
 import QRCodeImg from '../../assets/images/qrcode.png'
-import QRCodeWebp from '../../assets/images/qrcode.webp'
 import './Footer.scss'
 
 const Footer = () => {
@@ -47,11 +45,8 @@ const Footer = () => {
                     variants={footerVariants}
                 >
                     <motion.picture variants={itemVariants}>
-                        <source srcSet={LogoWebp} type="image/webp" />
-                        <img src={LogoImg} alt="Logo" width={200} height={53.6} />
+                        <img src={LogoImg} alt="Logo" width={250} height={128} className='logo' />
                     </motion.picture>
-
-                    <motion.p className='content-heading' variants={itemVariants}>包 租 ｜ 代 租 ｜ 代 管 ｜ 清 潔</motion.p>
 
                     <motion.p variants={itemVariants}>吉屋租賃有限公司</motion.p>
 
@@ -62,8 +57,7 @@ const Footer = () => {
                     <motion.p variants={itemVariants}>ADDRESS / <span>台中市北屯區昌平路一段220號2F</span></motion.p>
 
                     <motion.picture variants={itemVariants}>
-                        <source srcSet={QRCodeWebp} type="image/webp" />
-                        <img src={QRCodeImg} alt="qrcode" width={75} height={75} />
+                        <img src={QRCodeImg} alt="qrcode" width={75} height={75} className='qrcode' />
                     </motion.picture>
                 </motion.div>
             </Container>
