@@ -185,6 +185,10 @@
         &::after {
             content: "北屯區\A\A- 崇德十路二段 • 18 套 -";
             white-space: pre;
+
+            @include sm {
+                transform: translateX(0%);
+            }
         }
 
         &.lg {
@@ -200,6 +204,10 @@
         &::after {
             content: "北屯區\A\A- 后庄路 • 34 套 -";
             white-space: pre;
+
+            @include sm {
+                transform: translateX(0%);
+            }
         }
 
         &.lg {
@@ -215,6 +223,10 @@
         &::after {
             content: "北屯區\A\A- 大毅讚幸福 -";
             white-space: pre;
+
+            @include sm {
+                transform: translateX(0%);
+            }
         }
 
         &.lg {
@@ -230,6 +242,10 @@
         &::after {
             content: "北屯區\A\A- 昌平路一段 • 4 套 -";
             white-space: pre;
+
+            @include sm {
+                transform: translateX(0%);
+            }
         }
 
         &.lg {
@@ -245,6 +261,10 @@
         &::after {
             content: "北屯區\A\A- 北平路四段 • 店面 -";
             white-space: pre;
+
+            @include sm {
+                transform: translateX(0%);
+            }
         }
 
         &.lg {
@@ -260,6 +280,10 @@
         &::after {
             content: "西屯區\A\A- 文華路 • 6 套 -";
             white-space: pre;
+
+            @include sm {
+                transform: translateX(-100%);
+            }
         }
 
         &.lg {
@@ -275,6 +299,10 @@
         &::after {
             content: "西屯區\A\A- 喜來登大樓 -";
             white-space: pre;
+
+            @include sm {
+                transform: translateX(-100%);
+            }
         }
 
         &.lg {
@@ -290,6 +318,10 @@
         &::after {
             content: "南區\A\A- 允將行旅 -";
             white-space: pre;
+
+            @include sm {
+                transform: translateX(0%);
+            }
         }
 
         &.lg {
@@ -325,6 +357,100 @@
         &.lg {
             top: 49%;
             left: 33%;
+        }
+    }
+
+    &.shengmeijimei {
+        top: 52%;
+        left: 25%;
+
+        &::after {
+            content: "南屯區\A\A- 勝美極美 -";
+            white-space: pre;
+        }
+
+        &.lg {
+            top: 22%;
+            left: 58%;
+        }
+    }
+
+    &.tanfu {
+        top: 27%;
+        left: 48%;
+
+        &::after {
+            content: "潭子區\A\A- 潭富路二段 7 套 + 店面 -";
+            white-space: pre;
+        }
+
+        &.lg {
+            top: 33%;
+            left: 23%;
+        }
+    }
+
+    &.dongshan {
+        top: 40%;
+        left: 56%;
+
+        &::after {
+            content: "北屯區\A\A- 東山路一段 6 套 -";
+            white-space: pre;
+        }
+
+        &.lg {
+            top: 45%;
+            left: 37%;
+        }
+    }
+
+    &.qingdao {
+        top: 42%;
+        left: 43%;
+
+        &::after {
+            content: "北區\A\A- 青島東街 公寓 -";
+            white-space: pre;
+        }
+
+        &.lg {
+            top: 0%;
+            left: 30%;
+        }
+    }
+
+    &.huayuanxindu {
+        top: 37%;
+        left: 41%;
+
+        &::after {
+            content: "北區\A\A- 花園新都 -";
+            white-space: pre;
+
+            @include sm {
+                transform: translateX(0%);
+            }
+        }
+
+        &.lg {
+            top: 34%;
+            left: 7%;
+        }
+    }
+
+    &.taiwandadao {
+        top: 17%;
+        left: 9%;
+
+        &::after {
+            content: "北區\A\A- 台灣大道七段 6 套 -";
+            white-space: pre;
+        }
+
+        &.lg {
+            top: 33%;
+            left: 31%;
         }
     }
 }
