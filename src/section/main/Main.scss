@@ -29,6 +29,7 @@
     z-index: 2;
     width: 100%;
     padding: 0 16px;
+    max-width: 650px;
 
     @include xl {
         max-width: 600px;

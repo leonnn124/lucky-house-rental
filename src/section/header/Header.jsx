@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Container, Nav, Navbar, Modal } from 'react-bootstrap';
-import LogoImg from '../../assets/images/logo.svg'
+import LogoImg from '../../assets/images/logo.png'
 import './Header.scss'
 
 const Header = () => {
@@ -108,9 +108,10 @@ const Header = () => {
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.5 }}
+                            className='py-3'
                         >
                             <picture>
-                                <img src={LogoImg} alt="Logo" width={130} height={85} />
+                                <img src={LogoImg} alt="Logo" width={130} height={55} />
                             </picture>
                         </motion.div>
                     </Navbar.Brand>

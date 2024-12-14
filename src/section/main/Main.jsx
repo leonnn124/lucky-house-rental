@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Container } from 'react-bootstrap'
 import mainBgImg from '../../assets/images/main-bg.png';
-import mainTitleImg from '../../assets/images/main-title.svg';
+import mainTitleImg from '../../assets/images/main-title.png';
 import './Main.scss'
 
 const Main = () => {

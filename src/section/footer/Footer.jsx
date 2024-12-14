@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { Container } from 'react-bootstrap'
-import LogoImg from '../../assets/images/logo.svg'
+import LogoImg from '../../assets/images/logo.png'
 import QRCodeImg from '../../assets/images/qrcode.png'
 import './Footer.scss'
 
@@ -45,7 +45,7 @@ const Footer = () => {
                     variants={footerVariants}
                 >
                     <motion.picture variants={itemVariants}>
-                        <img src={LogoImg} alt="Logo" width={250} height={128} className='logo' />
+                        <img src={LogoImg} alt="Logo" width={250} height={107} className='logo' />
                     </motion.picture>
 
                     <motion.p variants={itemVariants}>吉屋租賃有限公司</motion.p>

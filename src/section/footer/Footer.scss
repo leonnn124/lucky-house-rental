@@ -28,12 +28,6 @@
         gap: 2rem;
     }
 
-    picture img.logo {
-        @include xl {
-            width: 200px;
-        }
-    }
-
     .content-heading {
         padding: 1.5rem 0;
         letter-spacing: 10px;
@@ -45,7 +39,8 @@
         }
     }
 
-    a {
+    a,
+    span {
         color: #111111;
     }
 
