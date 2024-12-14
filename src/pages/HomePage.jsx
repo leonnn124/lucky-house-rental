@@ -12,7 +12,7 @@ const HomePage = () => {
     const sectionRefs = React.useRef([]);
 
     const scrollToPath = (path) => {
-        let sectionId = path === '/' ? 'home' : path.substring(1);
+        let sectionId = path === '/' || path === '/#' ? 'home' : path.substring(2);
         const element = document.getElementById(sectionId);
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
@@ -25,24 +25,24 @@ const HomePage = () => {
             rootMargin: '0px',
             threshold: 0.4
         };
-    
+
         const observerCallback = (entries) => {
             entries.forEach(entry => {
                 const sectionId = entry.target.id;
-                const navLink = document.querySelector(`.aside-navbar a[href="${sectionId === 'home' ? '/' : `/${sectionId}`}"]`);
-                
+                const navLink = document.querySelector(`.aside-navbar a[href="${sectionId === 'home' ? '/#' : `/#${sectionId}`}"]`);
+
                 if (entry.isIntersecting) {
-                    const newUrl = sectionId === 'home' ? '/' : `/${sectionId}`;
-                    window.history.replaceState(null, null, newUrl);
+                    const newUrl = sectionId === 'home' ? '/#' : `/#${sectionId}`;
+                    // window.history.replaceState(null, null, newUrl);
                     navLink.classList.add('active');
                 } else {
                     navLink.classList.remove('active');
                 }
             });
         };
-    
+
         const observer = new IntersectionObserver(observerCallback, observerOptions);
-    
+
         sections.forEach((id, index) => {
             const element = document.getElementById(id);
             if (element) {
@@ -50,16 +50,16 @@ const HomePage = () => {
                 observer.observe(element);
             }
         });
-    
+
         return () => {
             sectionRefs.current.forEach(ref => {
                 if (ref) observer.unobserve(ref);
             });
         };
     }, []);
-    
+
     React.useEffect(() => {
-        const path = window.location.pathname;
+        const path = window.location.hash || '/#';
         scrollToPath(path);
     }, []);
 
