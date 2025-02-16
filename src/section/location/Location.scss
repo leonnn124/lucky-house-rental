@@ -164,7 +164,7 @@
     }
 
     &.futan {
-        top: 29%;
+        top: 31%;
         left: 54%;
 
         &::after {
@@ -179,7 +179,7 @@
     }
 
     &.chongde {
-        top: 34%;
+        top: 35%;
         left: 44%;
 
         &::after {
@@ -198,7 +198,7 @@
     }
 
     &.houzhuang {
-        top: 34%;
+        top: 35%;
         left: 42%;
 
         &::after {
@@ -217,7 +217,7 @@
     }
 
     &.dayi {
-        top: 33%;
+        top: 34%;
         left: 48%;
 
         &::after {
@@ -236,7 +236,7 @@
     }
 
     &.changping {
-        top: 42%;
+        top: 43%;
         left: 48%;
 
         &::after {
@@ -255,7 +255,7 @@
     }
 
     &.beiping {
-        top: 42%;
+        top: 43%;
         left: 46%;
 
         &::after {
@@ -275,7 +275,7 @@
 
     &.wenhua {
         top: 39%;
-        left: 33%;
+        left: 34%;
 
         &::after {
             content: "西屯區\A\A- 文華路 • 6 套 -";
@@ -294,7 +294,7 @@
 
     &.sheraton {
         top: 42%;
-        left: 33%;
+        left: 34%;
 
         &::after {
             content: "西屯區\A\A- 喜來登大樓 -";
@@ -306,13 +306,13 @@
         }
 
         &.lg {
-            top: 61%;
+            top: 58%;
             left: 75%;
         }
     }
 
     &.yunjiang {
-        top: 64%;
+        top: 65%;
         left: 35%;
 
         &::after {
@@ -325,13 +325,13 @@
         }
 
         &.lg {
-            top: 30%;
-            left: 8%;
+            top: 40%;
+            left: 11%;
         }
     }
 
     &.zhennan {
-        top: 20%;
+        top: 23%;
         left: 8%;
 
         &::after {
@@ -361,7 +361,7 @@
     }
 
     &.shengmeijimei {
-        top: 52%;
+        top: 53%;
         left: 25%;
 
         &::after {
@@ -376,7 +376,7 @@
     }
 
     &.tanfu {
-        top: 27%;
+        top: 29%;
         left: 48%;
 
         &::after {
@@ -386,12 +386,12 @@
 
         &.lg {
             top: 33%;
-            left: 23%;
+            left: 21%;
         }
     }
 
     &.dongshan {
-        top: 40%;
+        top: 41%;
         left: 56%;
 
         &::after {
@@ -406,7 +406,7 @@
     }
 
     &.qingdao {
-        top: 42%;
+        top: 43%;
         left: 43%;
 
         &::after {
@@ -421,7 +421,7 @@
     }
 
     &.huayuanxindu {
-        top: 37%;
+        top: 38%;
         left: 41%;
 
         &::after {
@@ -440,17 +440,123 @@
     }
 
     &.taiwandadao {
-        top: 17%;
+        top: 20%;
         left: 9%;
 
         &::after {
-            content: "北區\A\A- 台灣大道七段 6 套 -";
+            content: "沙鹿區\A\A- 台灣大道七段 6 套 -";
             white-space: pre;
         }
 
         &.lg {
             top: 33%;
             left: 31%;
+        }
+    }
+
+    &.royal {
+        top: 23%;
+        left: 48%;
+
+        &::after {
+            content: "潭子區\A\A- 崇德皇家 -";
+            white-space: pre;
+        }
+
+        &.lg {
+            top: 4%;
+            left: 21%;
+        }
+    }
+
+    &.shenglin {
+        top: 50%;
+        left: 55%;
+
+        &::after {
+            content: "太平區\A\A- 陞霖執美 -";
+            white-space: pre;
+
+            @include sm {
+                transform: translateX(0%);
+            }
+        }
+
+        &.lg {
+            top: 6%;
+            left: 8%;
+        }
+    }
+
+    &.xinglin {
+        top: 43%;
+        left: 32%;
+
+        &::after {
+            content: "西屯區\A\A- 教師新村 -";
+            white-space: pre;
+
+            @include sm {
+                transform: translateX(-100%);
+            }
+        }
+
+        &.lg {
+            top: 61%;
+            left: 72%;
+        }
+    }
+
+    &.yaxin {
+        top: 39%;
+        left: 49%;
+
+        &::after {
+            content: "北屯區\A\A- 亞昕一緒 -";
+            white-space: pre;
+        }
+
+        &.lg {
+            top: 42%;
+            left: 23%;
+        }
+    }
+
+    &.chengong {
+        top: 19%;
+        left: 54%;
+
+        &::after {
+            content: "豐原區\A\A- 成功路店面 -";
+            white-space: pre;
+
+            @include sm {
+                transform: translateX(0%);
+            }
+        }
+
+        &.lg {
+            top: 54%;
+            left: 11%;
+        }
+    }
+
+    &.yinghua {
+        top: 67%;
+        left: 14%;
+
+        &::after {
+            content: "烏日區\A\A- 櫻花家綻 -";
+            white-space: pre;
+
+            @include sm {
+                transform: translateX(0%);
+            }
+        }
+
+        &.lg {
+            top: 24%;
+            left: 10%;
         }
     }
 }
