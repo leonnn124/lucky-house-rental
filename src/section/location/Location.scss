@@ -370,7 +370,7 @@
         }
 
         &.lg {
-            top: 22%;
+            top: 28%;
             left: 58%;
         }
     }
@@ -527,7 +527,7 @@
         left: 54%;
 
         &::after {
-            content: "豐原區\A\A- 成功路店面 -";
+            content: "豐原區\A\A- 成功路 店面 -";
             white-space: pre;
 
             @include sm {
@@ -557,6 +557,36 @@
         &.lg {
             top: 24%;
             left: 10%;
+        }
+    }
+
+    &.jinde {
+        top: 49%;
+        left: 48%;
+
+        &::after {
+            content: "北區\A\A- 進德北路 獨棟 -";
+            white-space: pre;
+        }
+
+        &.lg {
+            top: 40%;
+            left: 63%;
+        }
+    }
+
+    &.jingke {
+        top: 56%;
+        left: 23%;
+
+        &::after {
+            content: "南屯區\A\A- 浩瀚菁科2MAX -";
+            white-space: pre;
+        }
+
+        &.lg {
+            top: 41%;
+            left: 52%;
         }
     }
 }

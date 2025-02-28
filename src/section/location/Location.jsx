@@ -88,6 +88,8 @@ const Location = () => {
                     <div className="location-dot yaxin"></div>
                     <div className="location-dot chengong"></div>
                     <div className="location-dot yinghua"></div>
+                    <div className="location-dot jinde"></div>
+                    <div className="location-dot jingke"></div>
                 </motion.div>
 
                 <motion.div
@@ -117,6 +119,7 @@ const Location = () => {
                         <Tab eventKey="north" title="北區" className='text-center' style={{ width: '250px' }}>
                             <img src={North} alt="北區" className='img-fluid' width={400} />
                             <div className="location-dot qingdao lg"></div>
+                            <div className="location-dot jinde lg"></div>
                         </Tab>
                         <Tab eventKey="west" title="西區" className='text-center' style={{ width: '250px' }}>
                             <img src={West} alt="西區" className='img-fluid' width={400} />
@@ -149,6 +152,7 @@ const Location = () => {
                         <Tab eventKey="nantun" title="南屯區">
                             <img src={Nantun} alt="南屯區" className='img-fluid' />
                             <div className="location-dot shengmeijimei lg"></div>
+                            <div className="location-dot jingke lg"></div>
                         </Tab>
                         <Tab eventKey="taiping" title="太平區">
                             <img src={Taiping} alt="太平區" className='img-fluid' />
