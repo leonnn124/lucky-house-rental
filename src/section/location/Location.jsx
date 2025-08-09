@@ -90,6 +90,13 @@ const Location = () => {
                     <div className="location-dot yinghua"></div>
                     <div className="location-dot jinde"></div>
                     <div className="location-dot jingke"></div>
+                    <div className="location-dot chongdehui"></div>
+                    <div className="location-dot leader"></div>
+                    <div className="location-dot xiaoshidai"></div>
+                    <div className="location-dot zhongqing"></div>
+                    <div className="location-dot dehua"></div>
+                    <div className="location-dot santaizi"></div>
+                    <div className="location-dot pengzhuang"></div>
                 </motion.div>
 
                 <motion.div
@@ -115,11 +122,14 @@ const Location = () => {
                             <div className="location-dot dongshan lg"></div>
                             <div className="location-dot huayuanxindu lg"></div>
                             <div className="location-dot yaxin lg"></div>
+                            <div className="location-dot chongdehui lg"></div>
+                            <div className="location-dot zhongqing lg"></div>
                         </Tab>
                         <Tab eventKey="north" title="北區" className='text-center' style={{ width: '250px' }}>
                             <img src={North} alt="北區" className='img-fluid' width={400} />
                             <div className="location-dot qingdao lg"></div>
                             <div className="location-dot jinde lg"></div>
+                            <div className="location-dot dehua lg"></div>
                         </Tab>
                         <Tab eventKey="west" title="西區" className='text-center' style={{ width: '250px' }}>
                             <img src={West} alt="西區" className='img-fluid' width={400} />
@@ -131,6 +141,7 @@ const Location = () => {
                         <Tab eventKey="south" title="南區" className='text-center' style={{ width: '250px' }}>
                             <img src={South} alt="南區" className='img-fluid' width={400} />
                             <div className="location-dot yunjiang lg"></div>
+                            <div className="location-dot pengzhuang lg"></div>
                         </Tab>
                         <Tab eventKey="xitun" title="西屯區">
                             <img src={Xitun} alt="西屯區" className='img-fluid' />
@@ -142,6 +153,8 @@ const Location = () => {
                             <img src={Shalu} alt="沙鹿區" className='img-fluid' />
                             <div className="location-dot zhennan lg"></div>
                             <div className="location-dot taiwandadao lg"></div>
+                            <div className="location-dot leader lg"></div>
+                            <div className="location-dot xiaoshidai lg"></div>
                         </Tab>
                         <Tab eventKey="tanzi" title="潭子區">
                             <img src={Tanzi} alt="潭子區" className='img-fluid' />
@@ -157,6 +170,7 @@ const Location = () => {
                         <Tab eventKey="taiping" title="太平區">
                             <img src={Taiping} alt="太平區" className='img-fluid' />
                             <div className="location-dot shenglin lg"></div>
+                            <div className="location-dot santaizi lg"></div>
                         </Tab>
                         <Tab eventKey="dali" title="大里區">
                             <img src={Dali} alt="大里區" className='img-fluid' />

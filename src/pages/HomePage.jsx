@@ -6,6 +6,7 @@ import Services from '../section/services/Services'
 import Featured from '../section/featured/Featured'
 import Location from '../section/location/Location'
 import Footer from '../section/footer/Footer'
+import Widget from '../section/widget/Widget'
 
 const HomePage = () => {
     const sections = ['home', 'intro', 'services', 'featured', 'location', 'contact'];
@@ -72,6 +73,7 @@ const HomePage = () => {
             <Featured />
             <Location />
             <Footer />
+            <Widget />
         </>
     )
 }

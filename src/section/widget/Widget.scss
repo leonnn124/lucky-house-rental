@@ -1,0 +1,42 @@
+@import '../../assets/styles/mixin';
+@import '../../assets/styles/variables';
+
+.widget-content {
+    position: fixed;
+    bottom: 30px;
+    right: 15px;
+    z-index: 1000;
+    display: flex;
+    gap: 1rem;
+
+    .message {
+        background: $lightPrimary;
+        border-radius: 999px;
+        cursor: pointer;
+    }
+
+    .line {
+        border-radius: 999px;
+        cursor: pointer;
+
+        img {
+            padding: 0;
+        }
+    }
+
+    .phone {
+        background: #004ea8;
+        cursor: pointer;
+        border-radius: 999px;
+    }
+
+    img {
+        width: 50px;
+        height: 50px;
+        padding: .5rem;
+
+        svg {
+            padding: 1rem;
+        }
+    }
+}

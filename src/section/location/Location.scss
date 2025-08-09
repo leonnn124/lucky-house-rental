@@ -330,6 +330,25 @@
         }
     }
 
+    &.pengzhuang {
+        top: 63%;
+        left: 41%;
+
+        &::after {
+            content: "南區\A\A- 朋莊社區 -";
+            white-space: pre;
+
+            @include sm {
+                transform: translateX(0%);
+            }
+        }
+
+        &.lg {
+            top: 43%;
+            left: 51%;
+        }
+    }
+
     &.zhennan {
         top: 23%;
         left: 8%;
@@ -342,6 +361,21 @@
         &.lg {
             top: 43%;
             left: 28%;
+        }
+    }
+
+    &.leader {
+        top: 16%;
+        left: 2%;
+
+        &::after {
+            content: "梧棲區\A\A- 領袖天廈 -";
+            white-space: pre;
+        }
+
+        &.lg {
+            top: 19%;
+            left: 8%;
         }
     }
 
@@ -420,6 +454,21 @@
         }
     }
 
+    &.dehua {
+        top: 45%;
+        left: 43%;
+
+        &::after {
+            content: "北區\A\A- 德化街 5 套 -";
+            white-space: pre;
+        }
+
+        &.lg {
+            top: 12%;
+            left: 30%;
+        }
+    }
+
     &.huayuanxindu {
         top: 38%;
         left: 41%;
@@ -439,6 +488,25 @@
         }
     }
 
+    &.zhongqing {
+        top: 38%;
+        left: 39%;
+
+        &::after {
+            content: "北屯區\A\A- 中清路二段 平房 -";
+            white-space: pre;
+
+            @include sm {
+                transform: translateX(0%);
+            }
+        }
+
+        &.lg {
+            top: 34%;
+            left: 2%;
+        }
+    }
+
     &.taiwandadao {
         top: 20%;
         left: 9%;
@@ -451,6 +519,21 @@
         &.lg {
             top: 33%;
             left: 31%;
+        }
+    }
+
+    &.xiaoshidai {
+        top: 18%;
+        left: 7%;
+
+        &::after {
+            content: "沙鹿區\A\A- 小時代 6 -";
+            white-space: pre;
+        }
+
+        &.lg {
+            top: 20%;
+            left: 26%;
         }
     }
 
@@ -485,6 +568,21 @@
         &.lg {
             top: 6%;
             left: 8%;
+        }
+    }
+
+    &.santaizi {
+        top: 52%;
+        left: 61%;
+
+        &::after {
+            content: "太平區\A\A- 太子三蕃街 -";
+            white-space: pre;
+        }
+
+        &.lg {
+            top: 11%;
+            left: 18%;
         }
     }
 
@@ -587,6 +685,25 @@
         &.lg {
             top: 41%;
             left: 52%;
+        }
+    }
+
+    &.chongdehui {
+        top: 36%;
+        left: 46%;
+
+        &::after {
+            content: "北屯區\A\A- 崇德薈 -";
+            white-space: pre;
+
+            @include sm {
+                transform: translateX(0%);
+            }
+        }
+
+        &.lg {
+            top: 22%;
+            left: 18%;
         }
     }
 }

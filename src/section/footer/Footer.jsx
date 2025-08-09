@@ -2,7 +2,6 @@ import React from 'react';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { Container } from 'react-bootstrap'
 import LogoImg from '../../assets/images/logo.png'
-import QRCodeImg from '../../assets/images/qrcode.png'
 import './Footer.scss'
 
 const Footer = () => {
@@ -21,18 +20,18 @@ const Footer = () => {
             opacity: 0,
         },
     };
-    
+
     const itemVariants = {
         visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
         hidden: { opacity: 0, y: 20 },
     };
-    
+
     React.useEffect(() => {
         if (inView) {
             controls.start('visible');
         }
     }, [controls, inView]);
-    
+
     return (
         <section id='contact' className='footer-section'>
             <hr />
@@ -54,11 +53,7 @@ const Footer = () => {
 
                     <motion.p variants={itemVariants}>TEL / <a href="tel:04-22339333">04-2233-9333</a></motion.p>
 
-                    <motion.p variants={itemVariants}>ADDRESS / <span>台中市北屯區昌平路一段220號2F</span></motion.p>
-
-                    <motion.picture variants={itemVariants}>
-                        <img src={QRCodeImg} alt="qrcode" width={75} height={75} className='qrcode' />
-                    </motion.picture>
+                    <motion.p variants={itemVariants}>ADDRESS / <span>台中市北區文心路四段200號8F-8</span></motion.p>
                 </motion.div>
             </Container>
         </section>

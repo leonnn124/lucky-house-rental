@@ -89,6 +89,10 @@
             border-radius: 30px;
         }
 
+        @include sm {
+            padding: 15px 20px;
+        }
+
         &.span-2 {
             grid-column: span 2;
 
